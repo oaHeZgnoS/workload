@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,iframe{
+	margin: 0px;
+	padding: 0px;
+}
+h1{
+	font-family: 宋体;
+}
+
+
+

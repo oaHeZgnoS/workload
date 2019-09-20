@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-autowire="byName">
+
+	<!-- 指定 数据库 连接配置信息 -->
+	<context:property-placeholder location="classpath:config_local.properties" />
+	
+	<!-- 告诉 spring 要用注解 -->
+	<context:annotation-config />
+	
+	<!-- 扫描 包 创建对象 -->
+	<context:component-scan base-package="com.**.action" />
+	<context:component-scan base-package="com.**.dao" />
+	<context:component-scan base-package="com.**.service" />
+	
+	<!-- 使用 Hibernate 的 事务管理，通过注解 添加事务管理 -->
+	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
+	
+	<!-- 数据库的 连接对象 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${database.driver}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+	</bean>
+	
+	<!-- sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.workload.domain.User</value>
+				<value>com.workload.domain.Notice</value>
+				<value>com.workload.domain.Workload</value>
+				<value>com.workload.domain.Cworkload</value>
+				<value>com.workload.domain.Formula</value>
+			</list>
+		</property>
+	<!-- hibernate 的属性设置 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		
+	</bean>
+	
+	<!-- Trasition -->
+	<bean id="hibernateTransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	
+	
+	
+</beans>

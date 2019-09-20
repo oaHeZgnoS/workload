@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+
+a,#modify,#fill,#sure{
+	display: block;
+	width: 180px;
+	height: 40px;
+}
+#modify{
+	background-image: url("../picture/modify.gif");
+}
+#fill{
+	background-image: url("../picture/fill.gif");
+}
+#sure{
+	background-image: url("../picture/sure.gif");
+}
+div{
+	margin-top: 20px;
+	margin-left: 30px;
+}

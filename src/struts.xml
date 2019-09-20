@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.action.extension" value="action" />
+    
+<!-- 给user用的 package -->
+    <package name="default" namespace="/user" extends="struts-default">
+
+        <action name="login" class="userAction" method="login">
+            <result name="success">/WEB-INF/jsp/main.jsp</result>
+            <result name="failure" type="redirect">/login.jsp</result>
+        </action>
+        
+        <action name="func" class="userAction" method="userFunc">
+            <result name="success">/WEB-INF/jsp/userFunc.jsp</result>
+        </action>
+        
+        <action name="adminFunc" class="userAction" method="adminFunc">
+            <result name="success">/WEB-INF/jsp/adminFunc.jsp</result>
+        </action>
+        
+        <action name="toUserManage" class="userAction" method="toUserManage">
+            <result name="success" type="chain">display-list</result>
+        </action>
+        
+        <action name="display-list" class="userAction" method="userList">
+            <result name="success">/WEB-INF/jsp/user-list.jsp</result>
+        </action>
+        
+        <action name="toShowQx" class="userAction" method="toShowQx">
+            <result name="success" type="chain">display-list0</result>
+        </action>
+        
+        <action name="display-list0" class="userAction" method="userList">
+            <result name="success">/WEB-INF/jsp/showQx.jsp</result>
+        </action>
+        
+        <action name="display-list1" class="userAction" method="userList1">
+            <result name="success">/WEB-INF/jsp/user-list.jsp</result>
+        </action>
+        
+        <action name="display-list2" class="userAction" method="userList2">
+            <result name="success">/WEB-INF/jsp/showQx.jsp</result>
+        </action>
+        
+        <action name="userQx" class="userAction" method="userQx">
+            <result name="success">/WEB-INF/jsp/userQx.jsp</result>
+        </action>
+        
+        <action name="upgrade" class="userAction" method="upgrade">
+            <result name="success">/WEB-INF/jsp/userQx.jsp</result>
+        </action>
+        
+        <action name="toSendNotice" class="userAction" method="toSendNotice">
+            <result name="success">/WEB-INF/jsp/addNotice.jsp</result>
+        </action>
+        
+        <action name="toCheckWl" class="userAction" method="toCheckWl">
+            <result name="success">/WEB-INF/jsp/cworkload-list.jsp</result>
+        </action>
+        
+        <action name="toUserModify" class="userAction" method="toUserModify">
+            <result name="success">/WEB-INF/jsp/user-details2.jsp</result>
+        </action>
+        
+        <action name="modify" class="userAction" method="modify">
+            <result name="success">/WEB-INF/jsp/user-detail.jsp</result>   
+        </action>
+        
+        <action name="to-update-psw" class="userAction" method="pswDetails">
+             <result name="success">/WEB-INF/jsp/psw-details.jsp</result>   
+        </action>
+        
+        <action name="update-psw" class="userAction" method="updatePsw">
+             <result name="success">/WEB-INF/jsp/psw-details.jsp</result>  
+        </action>
+        
+        <action name="update-user" class="userAction" method="update">
+             <result name="success">/WEB-INF/jsp/user-details.jsp</result>   
+        </action>
+        
+        <action name="reg" class="userAction" method="reg">
+            <result name="success" type="redirect">/login.jsp</result>
+        </action>
+        
+        <action name="userDetails" class="userAction" method="userDetails">
+            <result name="success">/WEB-INF/jsp/user-details3.jsp</result>
+        </action>
+        
+        <action name="delete-user" class="userAction" method="deleteUser">
+            <result name="success" type="chain">display-list</result>
+        </action>
+        
+        <action name="to-user-add" class="userAction" method="toUserAdd">
+            <result name="success">/WEB-INF/jsp/user-add.jsp</result>
+        </action>
+
+        <action name="user-add" class="userAction" method="addUser">
+            <result name="success" type="chain">display-list</result>
+        </action>
+        
+        <action name="systemFunc" class="userAction" method="systemFunc">
+            <result name="success">/WEB-INF/jsp/systemFunc.jsp</result>
+        </action>
+        
+        <action name="toIntoDB" class="userAction" method="toIntoDB">
+            <result name="success">/WEB-INF/jsp/toIntoDB.jsp</result>
+        </action>
+        
+        <action name="intoDB" class="userAction" method="upload">
+            <result name="success">/WEB-INF/jsp/toIntoDB.jsp</result>
+        </action>
+        
+        <action name="toWlFill" class="userAction" method="toWlFill">
+            <result name="success">/WEB-INF/jsp/addWl.jsp</result>
+        </action>
+        
+        <action name="toWlManage" class="userAction" method="toWlManage">
+            <result name="success">/WEB-INF/jsp/workload-list.jsp</result>
+        </action>
+        
+        <action name="toWlSure" class="userAction" method="toWlSure">
+            <result name="success">/WEB-INF/jsp/sureWl.jsp</result>
+        </action>
+        
+        
+        
+        <action name="exit" class="userAction" method="exit">
+             <result name="success">/login.jsp</result>
+        </action>
+        
+        <action name="check-cworkload" class="userAction" method="checkCworkload">
+            <result name="success" type="chain">toCheckWl</result>
+        </action>
+        
+        <action name="toSetFormula" class="userAction" method="listFormula">
+            <result name="success">/WEB-INF/jsp/formula-list.jsp</result>
+        </action>
+       
+
+    </package>
+    
+<!-- 给notice用的 package -->
+    <package name="notice" namespace="/notice" extends="struts-default">
+
+        <action name="addNotice" class="noticeAction" method="addNotice">
+            <result name="success">/WEB-INF/jsp/adminFunc.jsp</result>
+        </action>
+        
+        <action name="noticeList" class="noticeAction" method="noticeList">
+            <result name="success">/welcome.jsp</result>
+        </action>
+        
+        <action name="display-list" class="noticeAction" method="noticeList">
+            <result name="success">/WEB-INF/jsp/notice-list.jsp</result>
+        </action>
+
+    </package>
+    
+    
+<!-- 给workload用的 package -->
+    <package name="workload" namespace="/workload" extends="struts-default">
+
+        <action name="addWorkload" class="workloadAction" method="addWorkload">
+            <result name="success">/WEB-INF/jsp/userFunc.jsp</result>
+        </action>
+        
+        <action name="display-list" class="workloadAction" method="workloadList">
+            <result name="success">/WEB-INF/jsp/workload-list.jsp</result>
+        </action>
+        
+        <action name="workloadDetails" class="workloadAction" method="workloadDetails">
+            <result name="success">/WEB-INF/jsp/workload-details.jsp</result>
+        </action>
+        
+        <action name="update-workload" class="workloadAction" method="update">
+            <result name="success">/WEB-INF/jsp/workload-details.jsp</result>
+        </action>
+        
+        <action name="delete-workload" class="workloadAction" method="delete">
+            <result name="success" type="chain">display-list</result>
+        </action>
+        
+        <action name="to-workload-add" class="workloadAction" method="toWorkloadAdd">
+            <result name="success">/WEB-INF/jsp/workload-add.jsp</result>
+        </action>
+        
+        <action name="display-list1" class="workloadAction" method="workloadList1">
+            <result name="success">/WEB-INF/jsp/workload-list1.jsp</result>
+        </action>
+        
+        <action name="addWl" class="workloadAction" method="addWl">
+            <result name="success">/WEB-INF/jsp/adminFunc.jsp</result>
+        </action>
+        
+        <action name="display-list2" class="workloadAction" method="workloadList2">
+            <result name="success">/WEB-INF/jsp/workload-list2.jsp</result>
+        </action>
+        
+		<action name="toClassifyCount" class="workloadAction" method="toClassifyCount">
+            <result name="success">/WEB-INF/jsp/countWl.jsp</result>
+        </action>
+        
+        <action name="test" class="workloadAction" method="test">
+            <result name="success">/WEB-INF/jsp/test.jsp</result>
+        </action>
+        
+        <action name="testEcharts" class="workloadAction" method="testEcharts">
+            
+        </action>
+    </package>
+    
+<!-- 给CWorkload用的 package -->
+    <package name="cworkload" namespace="/cworkload" extends="struts-default">
+
+        <action name="addCWorkload" class="cworkloadAction" method="addCworkload">
+            <result name="success">/WEB-INF/jsp/userFunc.jsp</result>
+        </action>
+        
+        <action name="update-cworkload" class="cworkloadAction" method="updateCworkload">
+            <result name="success">/WEB-INF/jsp/userFunc.jsp</result>
+        </action>
+        
+        <action name="delete-cworkload" class="cworkloadAction" method="deleteCworkload">
+            <result name="success">/WEB-INF/jsp/userFunc.jsp</result>
+        </action>
+        
+        <action name="cworkloadDetails" class="cworkloadAction" method="cworkloadDetails">
+            <result name="success">/WEB-INF/jsp/cworkload-details.jsp</result>
+        </action>	
+    </package>
+    
+<!-- 给formula用的 package -->
+    <package name="formula" namespace="/formula" extends="struts-default">
+
+        <action name="toUpdateFml" class="formulaAction" method="toUpdateFml">
+            <result name="success">/WEB-INF/jsp/toUpdateFml.jsp</result>
+        </action>
+        
+        <action name="updateFml" class="formulaAction" method="updateFml">
+            <result name="success">/WEB-INF/jsp/toUpdateFml.jsp</result>
+        </action>
+        	
+    </package>
+    
+    
+    
+    <include file="example.xml"/>
+
+    <!-- Add packages here -->
+
+</struts>

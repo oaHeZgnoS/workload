@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,iframe{
+	margin: 0px;
+	padding: 0px;
+}
+#head{
+	background: transparent url("../picture/header_bg.gif") repeat-x;
+	height: 100px;
+}
+#head #title{
+	background:transparent url("../picture/title.gif");
+	width: 383px;
+	height: 46px;
+	position: absolute;
+	left: 100px;
+	top: 20px;
+}
+#head span{
+	color: white;
+	position: absolute;
+	left: 550px;
+	top: 45px;
+}
+#body #left{
+	float: left;
+	width: 15%;
+	height: 530px;
+}
+#body #mid{
+	position:absolute;
+	top:100px;
+	left:200px;
+	width: 5px;
+	height: 530px;
+	background: url("../picture/frame_bg.gif") repeat-y;
+}
+#body #right{
+	float: left;
+	width: 85%;
+	height: 530px;
+	margin-right: -10px;
+}
+#body #left ul li{
+	display: block;
+	width: 180px;
+	height: 40px;
+	margin: 10px;
+}
+#body #left ul #l1{
+	background: url("../picture/jzg.gif") no-repeat;
+}
+#body #left ul #l2{
+	background: url("../picture/xtgly.gif") no-repeat;
+}
+#body #left ul #l3{
+	background: url("../picture/gly.gif") no-repeat;
+}
+#body #left ul #l4{
+	background: url("../picture/btn_exit.gif") no-repeat;
+}
+iframe{
+	border: none;
+}
+
+
+
+
+
+
+

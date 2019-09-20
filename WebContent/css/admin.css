@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+
+a,#manageUser,#setQx,#sendNotice,#checkWl{
+	display: block;
+	width: 180px;
+	height: 40px;
+}
+#manageUser{
+	background-image: url("../picture/manageUser.gif");
+}
+#setQx{
+	background-image: url("../picture/setQx.gif");
+}
+#sendNotice{
+	background-image: url("../picture/sendNotice.gif");
+}
+#checkWl{
+	background-image: url("../picture/checkWl.gif");
+}
+div{
+	margin-top: 20px;
+	margin-left: 30px;
+}

@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+
+a,#manageWl,#classifyCount,#intoDB,#setFormula{
+	display: block;
+	width: 180px;
+	height: 40px;
+}
+#manageWl{
+	background-image: url("../picture/manageWl.gif");
+}
+#classifyCount{
+	background-image: url("../picture/classifyCount.gif");
+}
+#intoDB{
+	background-image: url("../picture/intoDB.gif");
+}
+#setFormula{
+	background-image: url("../picture/setFormula.gif");
+}
+div{
+	margin-top: 20px;
+	margin-left: 30px;
+}
+#excel{
+	margin-left: 20px;
+	margin-top: 10px;
+	border: 1px solid blue;
+}

@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+body,div,form,table,p,ul,li,a,input,img,span,strong,tr,td,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+#super{
+	background: url("../picture/login_bg.jpg") repeat-x;
+}
+#left{
+	width: 322px;
+	height: 398px;
+	background: transparent url("../picture/login_icon.jpg") no-repeat;
+	margin-top: 176px;
+	margin-left: 200px;
+	float: left;
+}
+
+#right{
+	background: transparent url("../picture/login_box.jpg") no-repeat;
+	width: 612px;
+	height: 398px;
+	margin-top: 176px;
+	float: left;
+}
+#right form{
+	margin-left: 150px;
+	margin-top: 200px;
+	color: white;
+}
+#right form input.c1{
+	width: 250px;
+	height: 30px;
+	background: transparent url("../picture/input_bg.png") no-repeat;
+	border: none;
+	margin-bottom: 10px;
+	text-indent: 10px;
+}
+#right form input.c2{
+	width: 100px;
+	height: 30px;
+	background: url("../picture/button_bg.png") no-repeat;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	border: none;
+	margin-top: 20px;
+}
+
+#right form input[type="submit"]{
+	position: absolute;
+	left: 850px;
+}
+#right form input[type="reset"]{
+	position: absolute;
+	left: 993px;
+}
+#right form span{
+	color: red;
+	font-size: 14px;
+	position: absolute;
+	bottom: 95px;
+	right: 275px;
+}
+
+
+.query-form{
+	height: 40px;
+	background: url("../picture/menu_bg.gif") repeat-x;
+	line-height: 40px;
+}
+.query-form span{
+	color: white;
+	font-size: 14px;
+	margin: 0px 10px;
+}
+.add-table{
+	padding: 10px;
+}
+.supplier-table{
+	padding: 10px;
+}
+#supplier-table h2{
+	float: left;
+}
+#supplier-table a.add-link{
+	float: right;
+	display: block;
+	color: white;
+	text-decoration: none;
+	background: url("../picture/button_bg.png");
+	padding: 5px 15px;
+}
+.table-title{
+	border-bottom: 5px solid #cccccc;
+	height: 80px;
+}
+.table-content{
+	margin-top: 20px;
+	width: 100%;
+	border: 8px solid #83bbd0;
+	text-align: center;
+	
+}
+.add-form ul{
+	list-style: none;
+	border: 5px solid #83bbd0;
+	margin-top: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.add-form ul li{
+	margin: 10px 0px;
+}
+.add-form ul li span{
+	display: inline-block;
+	width: 120px;
+	font-weight: bold;
+}
+.add-form ul li input{
+	display: inline-block;
+	width: 180px;
+}
+.add-form{
+	width: 100%;
+}
+.add-form .btn-form{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	background: url("../picture/button_bg.png") no-repeat;
+	cursor: pointer;
+	border: none;
+	color: white;
+	font-size: 14px;
+}
+.add-form .form-btn{
+	width: 380px;
+	margin: 0px auto;
+}
+.currentPage{
+	text-decoration: none;
+}
+
+.add-form ul li input.quanxian{
+	width: 20px;
+}
+
+.updatepsw{
+    background: rgba(0, 0, 0, 0) url("../picture/button_bg.png") no-repeat scroll 0 0;
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+}
+#myul span{
+	width: 220px;
+}
+#myul input{
+	text-indent: 6px;
+}
+
+
